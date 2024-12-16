@@ -14,7 +14,7 @@
     - name: Print a variable
       ansible.builtin.debug:
         #msg: Var URL - {{ URL }}
-        msg: "{{ URL }}"
+        msg: {{ URL }}
 
 ## KEY: VAL, Line 12 no quotes needed
 # KEY: {{ VAR }}, then ansible expects it to be in double quotes., Line 17 - quotes needed
