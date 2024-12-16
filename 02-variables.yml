@@ -3,6 +3,7 @@
   connection: local
   vars:
     URL: play.google.com
+    URL1: example.com
   tasks:
     - name: Print a variable
       vars:
@@ -12,6 +13,10 @@
 
     - name: Print a variable
       ansible.builtin.debug:
-        msg: Var URL - {{ URL }}
+        #msg: Var URL - {{ URL }}
+        msg: "{{ URL }}"
+
+## KEY: VAL, Line 12 no quotes needed
+# KEY: {{ VAR }}, then ansible expects it to be in double quotes., Line 17 - quotes needed
 
 
