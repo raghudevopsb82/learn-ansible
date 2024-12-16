@@ -10,5 +10,8 @@
       ansible.builtin.debug:
         msg: Var URL - {{ URL }}
 
+    - name: Print a variable
+      ansible.builtin.debug:
+        msg: Var URL - {{ URL }}
 
 
