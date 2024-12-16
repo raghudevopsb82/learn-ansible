@@ -1,0 +1,7 @@
+- name: Variables
+  hosts: localhost
+  connection: local
+  roles:
+    - sample
+
+
