@@ -3,9 +3,17 @@
   connection: local
   tasks:
     - name: Print If value is greater than 10
+      when: VAL > 10
       ansible.builtin.debug:
         msg: "{{ VAL }} is greater than 10"
 
     - name: Print If value is less than 10
       ansible.builtin.debug:
         msg: "{{ VAL }} is less than 10"
+      when: VAL < 10
+
+# In YAML, key position does not matter, meaning when keyword I used after name and as well as end of that task.
+
+
+
+
