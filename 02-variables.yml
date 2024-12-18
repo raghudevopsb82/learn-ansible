@@ -4,7 +4,8 @@
   vars:
     URL: play.google.com
     URL1: example.com
-  vars_files:    - just-vars.yml
+  vars_files:
+    - just-vars.yml
   tasks:
     - name: Print a variable
       vars:
@@ -16,6 +17,16 @@
       ansible.builtin.debug:
         #msg: Var URL - {{ URL }}
         msg: "{{ URL }}"
+
+
+    - name: Task output
+      ansible.builtin.shell: ls
+      register: out
+
+    - name: Print out
+      ansible.builtin.debug:
+        msg: "{{ out }}"
+
   roles:
     - sample
 ## KEY: VAL, Line 12 no quotes needed
@@ -28,7 +39,8 @@
 # 3. Play level variable from file
 # 4. Play level Variable
 # 5. Role vars variable
-# 6. Role default variable
+# 6. Inventory variables
+# 7. Role default variable
 
 # VAR: NAME
 # Variable can have a-z, A-Z, 0-9, _, -
