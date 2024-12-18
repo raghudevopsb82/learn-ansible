@@ -4,6 +4,8 @@
   vars:
     URL: play.google.com
     URL1: example.com
+  vars_files:
+    - just-vars.yml
   tasks:
     - name: Print a variable
       vars:
@@ -18,5 +20,11 @@
 
 ## KEY: VAL, Line 12 no quotes needed
 # KEY: {{ VAR }}, then ansible expects it to be in double quotes., Line 17 - quotes needed
+
+
+# Variable Precedence - If same variable name is declared in multiple, which one will be picked by ANsible.
+# . Task variable
+# . Play Variable
+
 
 
