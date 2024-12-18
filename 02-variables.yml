@@ -4,15 +4,13 @@
   vars:
     URL: play.google.com
     URL1: example.com
-    NEW-URL: new.google.com
-  vars_files:
-    - just-vars.yml
+  vars_files:    - just-vars.yml
   tasks:
     - name: Print a variable
       vars:
         URL: task.google.com
       ansible.builtin.debug:
-        msg: Var URL - {{ URL }}, NEW URL - {{ NEW-URL }}
+        msg: Var URL - {{ URL }}
 
     - name: Print a variable
       ansible.builtin.debug:
@@ -32,8 +30,23 @@
 # 5. Role vars variable
 # 6. Role default variable
 
-# VAR: VALUE
+# VAR: NAME
 # Variable can have a-z, A-Z, 0-9, _, -
+
+# VAR - TYPE
+# Three Types
+# Plain Variable - num: 10
+# List Variable - num: [01,20]
+# Map Variable - nums: {a:10, b:20}
+
+# VAR - DATA TYPES
+# String
+# Number
+# Boolean - True, False, Yes, No ( First letter can be capital or small)
+
+
+
+
 
 
 
