@@ -27,6 +27,10 @@
       ansible.builtin.debug:
         msg: "{{ out }}"
 
+    - name: Print fact
+      ansible.builtin.debug:
+        msg: "{{ ansible_architecture }}"
+
   roles:
     - sample
 ## KEY: VAL, Line 12 no quotes needed
