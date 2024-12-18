@@ -17,14 +17,18 @@
       ansible.builtin.debug:
         #msg: Var URL - {{ URL }}
         msg: "{{ URL }}"
-
+  roles:
+    - sample
 ## KEY: VAL, Line 12 no quotes needed
 # KEY: {{ VAR }}, then ansible expects it to be in double quotes., Line 17 - quotes needed
 
 
 # Variable Precedence - If same variable name is declared in multiple, which one will be picked by ANsible.
+# 1. Command line variable.
 # . Task variable
-# . Play Variable
+# . Play level variable from file
+# . Play level Variable
+
 
 
 
